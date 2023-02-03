@@ -18,6 +18,6 @@ const Nav = () => {
       </div>
       <Outlet />
     </Fragment>
-  ); 
+  );
 };
 export default Nav; 
