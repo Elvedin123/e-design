@@ -8,11 +8,14 @@ const Nav = () => {
       <div className="navigation">
         <Link className="logo-container" to='/'>
           <Crwnlogo className="logo" />
-        </Link>
+        </Link>S
 
         <div className="nav-links-container">
           <Link className="nav-link" to='/shop'>
             SHOP
+          </Link>
+          <Link className="nav-link" to='/signIn'>
+            SIGN IN
           </Link>
         </div>
       </div>
