@@ -1,6 +1,6 @@
 import Home from "./routes/home/home.component";
 import Nav from "./routes/navbar/nav.component";
-import Signin from "./routes/sign-in/signin.component";
+import Authentication from "./routes/authentication/authentication.component";
 import { Routes, Route } from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ const App = () => {
       <Route path='/' element={<Nav />}>
         <Route index element={<Home />} />
         <Route path='shop' element={<Shop />} />
-        <Route path='signIn' element={<Signin />} />
+        <Route path='auth' element={<Authentication />} />
       </Route>
 
     </Routes>
