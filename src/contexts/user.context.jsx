@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
         createuser(user)
       )
       console.log(user)
-      debugger;
+
       setCurrentUser(user)
     })
     return unsubscribe
