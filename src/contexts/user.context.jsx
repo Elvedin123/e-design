@@ -16,7 +16,7 @@ export const UserProvider = ({ children }) => {
       if (user) (
         createuser(user)
       )
-      console.log(user)
+
 
       setCurrentUser(user)
     })
