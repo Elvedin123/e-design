@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Button from "../button/button.componen"
+import Button from "../button/button.component.jsx"
 import { createauthuser, createuser } from "../../utilities/firebase/firebase.utils"
 import FormInput from "../form-input/form-input.component"
 import './sign-up-form.styles.scss'
