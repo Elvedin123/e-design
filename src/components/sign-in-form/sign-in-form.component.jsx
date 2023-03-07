@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Button from "../button/button.component.jsx"
+import Button, { button_type_class } from "../button/button.component.jsx"
 import { signInWithGooglePopup, signInAuthUserWithEmailAndPassword } from "../../utilities/firebase/firebase.utils"
 import FormInput from "../form-input/form-input.component"
 import './sign-in-form.styles.scss'
@@ -76,7 +76,7 @@ const SignInForm = () => {
 
         <div className="buttons-container">
           <Button type='submit'>Sign In </Button>
-          <Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In </Button>
+          <Button buttonType={button_type_class.google} type='button' onClick={signInWithGoogle}>Google Sign In </Button>
         </div>
 
       </form>
