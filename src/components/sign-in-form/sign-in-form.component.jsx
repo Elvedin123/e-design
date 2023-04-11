@@ -3,6 +3,8 @@ import Button, { button_type_class } from "../button/button.component.jsx"
 import { signInWithGooglePopup, signInAuthUserWithEmailAndPassword } from "../../utilities/firebase/firebase.utils"
 import FormInput from "../form-input/form-input.component"
 import './sign-in-form.styles.scss'
+import { useNavigate } from "react-router-dom"
+
 
 
 const defaultFormFields = {
@@ -12,6 +14,7 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields)
   const { email, password } = formFields;
+  const navigate = useNavigate()
 
   // console.log(formFields)
   const resetForm = () => {
@@ -20,15 +23,15 @@ const SignInForm = () => {
 
 
   const signInWithGoogle = async () => {
+
     await signInWithGooglePopup();
 
 
     // console.log(userDocRef)
   }
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    navigate('/')
     resetForm(defaultFormFields)
     try {
       await signInAuthUserWithEmailAndPassword(email, password)
