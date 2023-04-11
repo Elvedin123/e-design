@@ -7,10 +7,11 @@ import { CartContext } from "../../contexts/cart.context";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import { NavigationContainer, LogoContainer, NavLinks, NavLink } from './nav.styles.jsx'
-
+import { useNavigate } from "react-router-dom";
 const Nav = () => {
   const { currentUser } = useContext(UserContext)
   const { isCartOpen } = useContext(CartContext)
+  const navigate = useNavigate()
   return (
     <Fragment>
       <NavigationContainer className="navigation">
@@ -24,7 +25,10 @@ const Nav = () => {
           </NavLink>
           {
             currentUser ? (
-              <NavLink as='span' onClick={signOutUser}>SIGN OUT</NavLink>
+              <NavLink as='span' onClick={() => {
+                signOutUser();
+                navigate('/auth')
+              }}>SIGN OUT</NavLink>
             ) : (<NavLink to='/auth'>
               SIGN IN
             </NavLink>
