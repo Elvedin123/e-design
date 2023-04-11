@@ -6,11 +6,18 @@ const CategoryPreview = ({ title, products }) => {
 
   return (
     <div className='category-preview-container'>
-      <h2>
-        <Link className='title' to={title}>
-          {title.toUpperCase()}
-        </Link>
-      </h2>
+      <div className='shop-title-container'>
+        <h2>
+          <Link className='title' to={title}>
+            {title.toUpperCase()}
+          </Link>
+        </h2>
+        <h4 className='see-more'>
+          <Link className='see-more' to={title}>
+            See More
+          </Link>
+        </h4>
+      </div>
       <div className='preview'>
         {
           products.filter((_, idx) => idx < 4).map((product) => <ProductCard key={product.id} product={product} />)
