@@ -3,8 +3,7 @@ import Button from "../button/button.component.jsx"
 import { createauthuser, createuser } from "../../utilities/firebase/firebase.utils"
 import FormInput from "../form-input/form-input.component"
 import './sign-up-form.styles.scss'
-
-
+import { useNavigate } from "react-router-dom"
 
 const defaultFormFields = {
   displayName: '',
@@ -15,7 +14,7 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields)
   const { displayName, email, password, confirmPassword } = formFields;
-
+  const navigate = useNavigate()
 
   // console.log(formFields)
   const resetForm = () => {
@@ -24,6 +23,7 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    navigate('/')
     if (password !== confirmPassword) {
       alert('Passwords do not match!');
       return;
