@@ -46,3 +46,6 @@ export const createuser = async (userAuth, additionalInformation = {}) => {
 The code snippet about comes from my firebase utility folder. This function is used to generate new users inside the firebase database! Which can be later called in a component that utilizes can utilize this function to create users on the front-end of the application!
 
 #
+
+## Whimsical
+[Click Here](https://whimsical.com/app-P1YRTdtyRrU7XLaxdc47U9) to review my component architecture.
