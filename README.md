@@ -57,3 +57,8 @@ The code snippet about comes from my firebase utility folder. This function is u
 - Using Stripe api to allow users to pay for items at checkout using a mock credit card.
 - Creating a mobile variation of the application.
 
+#
+
+### Web-URL
+
+[EC-Design](https://ec-design.netlify.app/)
