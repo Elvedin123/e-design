@@ -49,3 +49,11 @@ The code snippet about comes from my firebase utility folder. This function is u
 
 ## Whimsical
 [Click Here](https://whimsical.com/app-P1YRTdtyRrU7XLaxdc47U9) to review my component architecture.
+
+# 
+
+## Post-MVPs
+
+- Using Stripe api to allow users to pay for items at checkout using a mock credit card.
+- Creating a mobile variation of the application.
+
